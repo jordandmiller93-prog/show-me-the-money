@@ -8,7 +8,7 @@
 [![Latest release](https://img.shields.io/github/v/release/iamzifei/show-me-the-money?label=release&color=green)](https://github.com/iamzifei/show-me-the-money/releases)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-orange.svg)](LICENSE)
 
-**Current version: `v2.5.1`** · [What's new →](#-whats-new-in-v251) · [Full changelog →](CHANGELOG.md)
+**Current version: `v2.6.0`** · [What's new →](#-whats-new-in-v260) · [Full changelog →](CHANGELOG.md)
 
 [English](README.md) | [中文](README.zh-CN.md)
 
@@ -51,15 +51,18 @@ Works with **Claude Code**, **Codex CLI**, **Gemini CLI**, and other agents that
 
 ---
 
-## ✨ What's New in v2.5.1
+## ✨ What's New in v2.6.0
 
-Small but noticeable fixes following the v2.5.0 ship:
+**The "come back to /money" release** — an interaction overhaul of the router:
 
-- **Value Quantification blocks now render correctly in terminal markdown viewers.** The previous empty-header two-column tables (`| | |`) collapsed to "Column 1 / Column 2" prose in Claude Code's terminal renderer. Converted across 13 SKILL.md files to a bulleted list with bold prefix — renders cleanly in terminal, GitHub, and every other markdown viewer. An explicit rule in `/money`'s template now forbids reintroducing the empty-header form.
-- **"What's New" history split into a dedicated changelog.** Older release notes lived inline in this README and were getting long. They now live in [CHANGELOG.md](CHANGELOG.md) (and [CHANGELOG.zh-CN.md](CHANGELOG.zh-CN.md) for the Chinese version). The README front-page stays focused on the current release.
+- **Post-task navigation.** `/money` is now dual-mode: after any skill finishes, come back to `/money` and it reads that skill's actual conclusions and recommends 2-3 next moves, each with a "because". A per-skill navigation map (conclusion signal → next step → why) covers the whole suite. You only need to remember one thing: **when unsure what's next, `/money`**.
+- **The language menu is gone.** `/money` detects your language from what you write and follows silently — no more "choose your language" gate on every session.
+- **Fast-path routing.** Arrive with a clear ask ("my conversion is stuck", "review this before I ship") and you get routed immediately — no onboarding, no business-type quiz, no situation menu. Those questions are now asked lazily, by the skill that actually needs the answer.
+- **The proactive handoff.** Every skill ends with one yes/no offer of the most likely next action ("Strategy's set. Want me to start building the MVP right now?") — a concrete action, not a skill name.
 
 ### Looking for older release notes?
 
+- [v2.5.1](CHANGELOG.md#v251--2026-05-11) — Value Quantification terminal rendering fix + changelog split
 - [v2.5.0](CHANGELOG.md#v250--2026-05-11) — business-type awareness (7 types) + `/money-strategy iterate` for post-PMF iteration
 - [v2.4.0](CHANGELOG.md#v240--2026-05-10) — operating modes, narrowest-bet, ship lifecycle, STRIDE, portfolio learnings, auto-update
 - [v2.3.1](CHANGELOG.md#v231--2026-05-03) — atom polish, per-skill callouts, workflow fix

@@ -6,6 +6,22 @@ All notable changes to **Show Me The Money** are documented here. The current re
 
 ---
 
+## v2.6.0 — 2026-07-07
+
+**The "come back to /money" release.** Interaction overhaul of the router, borrowing the best UX patterns from dbskill v2.15/2.16 (dual-mode routing + centralized post-task navigation). No new skill files — count stays at 25.
+
+### Added
+- **Mode B: Post-Task Navigation.** `/money` is now dual-mode. If the conversation already contains output from any money-* skill, `/money` reads that skill's *specific conclusions* and recommends 2-3 next moves, each with a "because" tied to an actual finding. A per-skill navigation map (conclusion signal → next step → why) covers all 13 producing skills. The user only needs to remember one thing: **when unsure what's next, come back to `/money`**.
+- **The Proactive Handoff.** Every skill now ends with ONE yes/no offer of the single most likely next action ("Strategy's set. Want me to start building the MVP right now?") — chosen from the navigation map, naming the concrete action rather than the skill. Borrowed from dbs-script-flow's "诊断完默认主动问" pattern. Skipped when nothing follows naturally — a forced handoff erodes trust faster than none.
+- **Boundary cases.** Multiple needs at once → one at a time. Out-of-scope request → say so and list actual capabilities. Aimless chat → decline and anchor to action.
+
+### Changed
+- **Language menu is gone.** `/money` no longer opens with a "choose your language" prompt. It detects language from what the user actually wrote and follows silently — including mid-session switches. The menu only mattered on the very first bare `/money`; now even that defaults sensibly.
+- **Fast-path routing.** A user who arrives with a clear intent ("my conversion is stuck", "review this before I ship") gets routed *immediately* — prior state loads silently, and onboarding / business-type capture / situation menu are all skipped. Those questions are now lazy: asked by the target skill at the moment it actually needs the answer, not as an upfront gate. One-question rule: once intent is confirmed, never ask a second clarifying question before routing.
+- **Value Quantification block** gains a 🧭 line pointing back to `/money` for next-step navigation, alongside the existing 💾 `/money-save` nudge.
+
+---
+
 ## v2.5.1 — 2026-05-11
 
 ### Fixed
