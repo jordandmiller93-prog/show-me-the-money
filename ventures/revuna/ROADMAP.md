@@ -17,8 +17,16 @@ Phased build plan. Each item is marked who does it — **[You]** needs Jordan's 
 
 ## Phase 2 — Narrowest-bet test (target: send by 2026-07-16)
 
-- [ ] **[Claude]** Research ~50 businesses matching the targeting filter in STRATEGY.md (Google Maps, manual review reading — no paid API needed for this batch size).
-- [ ] **[Claude]** Draft 20 personalized outreach emails using `outreach/cold-email-template.md`.
+**Update (2026-07-15): plan changed mid-flight.** The original plan assumed I could browse Google Maps/Yelp to pull real unanswered-review text. Both blocked automated fetches (Yelp returned `403 Forbidden`), and working around that would mean scraping against their terms of service — not doing that, and not fabricating review quotes to put in emails to real businesses either. Decision: use Google's official Places API instead (also groundwork Revuna needs later for the real product).
+
+- [ ] **[You]** Set up Google Places API access:
+  1. Go to [console.cloud.google.com](https://console.cloud.google.com), create a new project (e.g. "revuna-prospecting").
+  2. APIs & Services → Library → enable **"Places API (New)"**.
+  3. APIs & Services → Credentials → Create Credentials → API key. Restrict it to Places API only (Credentials → edit key → API restrictions).
+  4. **Set a budget alert before doing anything else** (Billing → Budgets & alerts → create a budget, e.g. $5) — Places API has a free monthly usage credit but a card is required on file, and a budget alert protects your $0-100 budget from surprise charges if usage patterns change.
+  5. Share the API key in chat so I can use it this session (I won't commit it to the repo — it'll go in a local, gitignored `.env` file only).
+- [ ] **[Claude]** Using the API key: query Places for ~50 candidate businesses matching the targeting filter in STRATEGY.md (category + rating + review count), pull real recent review text via Place Details, identify ones without an owner response.
+- [ ] **[Claude]** Draft 20 personalized outreach emails using `outreach/cold-email-template.md`, each with a real, accurately-quoted review.
 - [ ] **[You]** Review and actually send the 20 emails from an email address you control (sending needs your mailbox — I can't send email on your behalf without access to an account). I'll hand you a ready-to-send batch.
 - [ ] **[You/Claude]** Track replies. Check the kill-switch signal by 2026-07-23 per STRATEGY.md.
 
