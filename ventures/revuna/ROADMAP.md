@@ -11,7 +11,7 @@ Phased build plan. Each item is marked who does it — **[You]** needs Jordan's 
 
 ## Phase 1 — Get the landing page live (free)
 
-- [ ] **[You]** Create a free Formspree account (formspree.io), get a form ID, replace `YOUR_FORM_ID` in `site/index.html`.
+- [x] **[You + Claude]** Formspree form created and wired into `site/index.html` (endpoint `xjgngwbd`).
 - [ ] **[You]** Deploy `site/` for free — easiest path: [Vercel](https://vercel.com) free tier, "Import Git Repository," point it at this repo with **root directory set to `ventures/revuna/site`**. No build step needed, it's static HTML. Takes about 3 minutes, no card required.
 - [ ] **[You]** (Optional, costs money) Buy a domain once the wedge is validated — don't spend on this before the narrowest-bet test resolves.
 
