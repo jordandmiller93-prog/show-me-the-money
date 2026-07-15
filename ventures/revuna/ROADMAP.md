@@ -1,6 +1,6 @@
 # Revuna — Roadmap
 
-Phased build plan. Each item is marked who does it — **[You]** needs Jordan's own account/identity/payment, **[Claude]** is something that gets done in a Claude Code session (this one or a future one).
+Phased build plan. Each item is marked who does it — **[You]** needs Jordan's own account/identity/payment, **[Claude]** is something that gets done in a Claude Code. session (this one or a future one).
 
 ## Phase 0 — Foundations (this session)
 
