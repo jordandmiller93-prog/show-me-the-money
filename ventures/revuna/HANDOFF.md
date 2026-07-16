@@ -19,6 +19,8 @@ _Last updated: 2026-07-15 evening (autonomous loop, iteration 1)_
 
 3. **Vercel: make the site public.** The landing page deployed to project `revuna` (URL: revuna-jordandmiller93-5423s-projects.vercel.app) but it's behind Vercel's Deployment Protection auth wall. In the Vercel dashboard → revuna project → Settings → Deployment Protection → set Vercel Authentication to **Disabled** (or Standard Protection off for production). The loop will verify it's publicly reachable afterward.
 
+4. **GitHub auth on this laptop.** Pushes are failing — no credentials on this machine. Easiest: install GitHub CLI (`brew install gh`) then `gh auth login`. The loop's commits are safe locally and will push once you've done this.
+
 ## 🟡 Soon
 
 4. **Kill-switch check 2026-07-23** per STRATEGY.md — if outreach shows no signal by then, we stop and re-aim.
