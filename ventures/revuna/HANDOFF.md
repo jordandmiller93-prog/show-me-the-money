@@ -6,16 +6,11 @@ _Last updated: 2026-07-15 evening (autonomous loop, iteration 1)_
 
 ## 🔴 Do now
 
-1. **Send the 5 outreach emails.** 5 Gmail drafts are sitting in your drafts folder (subjects start with "Your … reviews — quick one"):
-   - Ludwig Family Dentistry — geludwigdds@gmail.com
-   - Hometown Family Dental — hometowndentalms@gmail.com
-   - Big Timber Family Dental — kelseyjfraser@hotmail.com
-   - Georgetown Family Dentistry — info@gtxfamilydentistry.com
-   - Jacksonville Family Dentistry — office@fancherfamilydentistry.com
+1. **Send the 13 outreach emails.** All 13 send-ready drafts are in Gmail with the real mailing address (1300 SW Park Ave #1309, Portland, OR 97201) and opt-out line — CAN-SPAM compliant, nothing left to edit. Dental: Ludwig, Hometown, Big Timber, Georgetown, Jacksonville, Edmond, Mobile, Your Family Dentist ("Quick one about Your Family Dentist's reviews"). Salon/spa: Stonewater, Studio One Hair Design, Studio One Salon, ABQ Medical Spa, Somerset Nails. Space sends 1–2 min apart.
 
-   **Before sending, replace `[Your mailing address]` in each footer with a real mailing address** — CAN-SPAM requires it; the drafts are not legally sendable as-is. A PO box or virtual mailbox works.
+2. **Delete the 6 obsolete drafts**: the 5 containing the literal text `[Your mailing address]` (Ludwig, Hometown, Big Timber, Georgetown, Jacksonville — older duplicates) and the one titled "Your Your Family Dentist reviews — quick one".
 
-2. **Place the phone calls** for the 12 phone-only batch-1 leads — scripts in `outreach/batch-1-real-leads.md`.
+3. **Place the phone calls** for the 19 phone-only leads — scripts in `outreach/batch-1-real-leads.md` and `outreach/batch-2-real-leads.md`.
 
 ## 🟡 Soon
 
