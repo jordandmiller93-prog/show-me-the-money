@@ -12,7 +12,7 @@ Phased build plan. Each item is marked who does it — **[You]** needs Jordan's 
 ## Phase 1 — Get the landing page live (free)
 
 - [x] **[You + Claude]** Formspree form created and wired into `site/index.html` (endpoint `xjgngwbd`).
-- [ ] **[You]** Deploy `site/` for free — easiest path: [Vercel](https://vercel.com) free tier, "Import Git Repository," point it at this repo with **root directory set to `ventures/revuna/site`**. No build step needed, it's static HTML. Takes about 3 minutes, no card required.
+- [x] **[Claude]** Deploy `site/` — done 2026-07-15 via the Vercel connector (this session has one; the old sandbox blocker is gone). Production deployment `dpl_9hfSShWNpdhLLg8qVHyY1Vfgndyj`, project `revuna`, URL `revuna-jordandmiller93-5423s-projects.vercel.app`. **One step left [You]:** the URL is behind Vercel's Deployment Protection auth wall — disable it in the dashboard (see HANDOFF.md #3). Loop will verify public reachability after.
 - [ ] **[You]** (Optional, costs money) Buy a domain once the wedge is validated — don't spend on this before the narrowest-bet test resolves.
 
 ## Phase 2 — Narrowest-bet test (target: send by 2026-07-16)
@@ -21,7 +21,8 @@ Phased build plan. Each item is marked who does it — **[You]** needs Jordan's 
 
 - [x] **[Claude]** Sourced first batch of 4 real, verified single-location dental practices → `outreach/batch-1-real-leads.md`. Star rating / unanswered-review-count criteria from STRATEGY.md's targeting filter are **not verified** for this batch (no Maps access this session) — treat as a first test batch, not fully-qualified.
 - [x] **[Claude]** Drafted outreach: cold-call script (3 leads, no verified email) + 1 full email (1 lead with a verified address) in `outreach/batch-1-real-leads.md`.
-- [ ] **[You]** Make the 3 calls / send the 1 email. I can't place calls or send from your inbox — this step needs you.
+- [x] **[Claude]** 2026-07-15: Gmail outreach drafts created for all 5 verified-email batch-1 leads (drafts only, nothing sent) — see HANDOFF.md #1. Batch-2 lead sourcing (target ~13 more) in progress via autonomous loop.
+- [ ] **[You]** Add your real mailing address to the 5 drafts, review, send. Place the calls for the 12 phone-only leads. See HANDOFF.md.
 - [ ] **[You/Claude]** Track replies/responses. Check the kill-switch signal by 2026-07-23 per STRATEGY.md.
 - [ ] **[Optional, later]** Scale beyond this first batch of 4 — either continued manual WebSearch sourcing (slow, ~1-2 searches per lead) or the Google Places API (setup steps below, kept for reference) if this channel proves out and volume is worth the setup.
 
